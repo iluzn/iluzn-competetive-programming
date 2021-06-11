@@ -17,6 +17,11 @@ void insert_end(int data){
   Node* node=(Node*)malloc(sizeof(Node));
   node->next=NULL;
   node->data=data;
+  if(head == NULL)  
+        {  
+            head = node;  
+            return;   
+        }  
   while(temp->next!=NULL){
     temp=temp->next;
   }
@@ -133,13 +138,14 @@ void reverse(){
   head=prev;
 }
 int main(){
-  insert_begin(5);
-  insert_begin(62);
+  // insert_begin(5);
+  // insert_begin(62);
   insert_end(6);
   insert_end(63);
-  insert_atpos(4,234);
-  delete_begin();
-  delete_end();
+ insert_end(63);
+ insert_end(63);
+ insert_end(63);
+ 
   print();
   delete_atpos(2);
   reverse();
